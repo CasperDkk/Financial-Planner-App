@@ -15,43 +15,124 @@
 
     <main>
       <section class="tracker">
-        <h2>Track Your Finances</h2>
-        <div class="form-container">
-          <form id="finance-form">
-            <h3>Add Entry</h3>
-            <label for="type">Type:</label>
-            <select id="type" required>
-              <option value="Expense">Expense</option>
-              <option value="Saving">Saving</option>
-              <option value="Investment">Investment</option>
-            </select>
+        <div class="tracker-section">
+          <h2>Track Your Finances</h2>
 
-            <label for="category">Category:</label>
-            <input
-              type="text"
-              id="category"
-              placeholder="e.g., Food, Rent"
-              required
-            />
+          <!-- Expense Form -->
+          <div class="form-container">
+            <h3>Add Expense</h3>
+            <form id="expense-form">
+              <label for="expense-category">Category:</label>
+              <input
+                type="text"
+                id="expense-category"
+                placeholder="e.g., Food, Rent"
+                required
+              />
+              <label for="expense-amount">Amount:</label>
+              <input
+                type="number"
+                id="expense-amount"
+                placeholder="e.g., 100"
+                required
+              />
+              <button type="submit">Add Expense</button>
+            </form>
+            <ul id="expense-list" class="item-list"></ul>
+          </div>
 
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" placeholder="e.g., 100" required />
+          <!-- Savings Form -->
+          <div class="form-container">
+            <h3>Add Saving</h3>
+            <form id="saving-form">
+              <label for="saving-category">Category:</label>
+              <input
+                type="text"
+                id="saving-category"
+                placeholder="e.g., Emergency Fund"
+                required
+              />
+              <label for="saving-amount">Amount:</label>
+              <input
+                type="number"
+                id="saving-amount"
+                placeholder="e.g., 100"
+                required
+              />
+              <button type="submit">Add Saving</button>
+            </form>
+            <ul id="saving-list" class="item-list"></ul>
+          </div>
 
-            <button type="submit">Add</button>
-          </form>
+          <!-- Investments Form -->
+          <div class="form-container">
+            <h3>Add Investment</h3>
+            <form id="investment-form">
+              <label for="investment-category">Category:</label>
+              <input
+                type="text"
+                id="investment-category"
+                placeholder="e.g., Stocks, Mortgage"
+                required
+              />
+              <label for="investment-amount">Amount:</label>
+              <input
+                type="number"
+                id="investment-amount"
+                placeholder="e.g., 1000"
+                required
+              />
+              <button type="submit">Add Investment</button>
+            </form>
+            <ul id="investment-list" class="item-list"></ul>
+          </div>
+
+          <!-- Debts Form -->
+          <div class="form-container">
+            <h3>Add Debt</h3>
+            <form id="debt-form">
+              <label for="debt-category">Category:</label>
+              <input
+                type="text"
+                id="debt-category"
+                placeholder="e.g., Personal Loan, Bank Loan"
+                required
+              />
+              <label for="debt-amount">Amount:</label>
+              <input
+                type="number"
+                id="debt-amount"
+                placeholder="e.g., 1000"
+                required
+              />
+              <button type="submit">Add Debt</button>
+            </form>
+            <ul id="investment-list" class="item-list"></ul>
+          </div>
         </div>
       </section>
 
       <section class="charts">
         <h2>Your Financial Overview</h2>
+
+        <!-- Expense Chart -->
         <div class="chart-container">
           <canvas id="expenseChart"></canvas>
         </div>
+
+        <!-- Savings Chart -->
         <div class="chart-container">
           <canvas id="savingChart"></canvas>
         </div>
+
+        <!-- Investments Chart -->
         <div class="chart-container">
           <canvas id="investmentChart"></canvas>
+        </div>
+
+        <!-- Debts Chart -->
+        <div class="chart-container">
+          <canvas id="debChart"></canvas>
         </div>
       </section>
     </main>

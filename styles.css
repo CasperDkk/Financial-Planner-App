@@ -2,99 +2,102 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Verdana', sans-serif;
-    background-color: #ffffff; /* Bright white background */
-    color: #333333; /* Dark gray text for readability */
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-header {
-    background-color: #0066cc; /* Corporate blue for header */
+  }
+  
+  header {
+    background-color: darkcyan;
     padding: 20px;
     text-align: center;
-}
-
-header h1 {
-    color: #ffffff; /* White text for contrast */
+  }
+  
+  header h1 {
+    color: #ffffff;
     font-size: 2.5rem;
-}
-
-main {
+  }
+  
+  main {
     flex: 1;
     padding: 20px;
-}
-
-.tracker, .charts {
-    background-color: #f7f9fc; /* Light blue/gray for tracker and charts */
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tracker {
+    width: 60%;
+  }
+  
+  .charts {
+    width: 35%;
+  }
+  
+  h2 {
+    color: #0066cc;
+    margin-bottom: 15px;
+  }
+  
+  .form-container {
+    background-color: #f7f9fc;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    border: 1px solid #e6e6e6; /* Subtle border */
-}
-
-h2 {
-    color: #0066cc; /* Blue for subheadings */
-    margin-bottom: 15px;
-}
-
-.form-container {
-    display: flex;
-    justify-content: center;
-}
-
-#finance-form {
+    border: 1px solid #e6e6e6;
+  }
+  
+  .form-container h3 {
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  #expense-form, #saving-form, #investment-form, #debt-form {
     display: flex;
     flex-direction: column;
-    width: 300px;
-}
-
-#finance-form label {
+    width: 100%;
+  }
+  
+  #expense-form label, #saving-form label, #investment-form label, #debt-form label {
     margin: 10px 0 5px;
-    color: #333333; /* Dark gray labels */
-}
-
-#finance-form input, #finance-form select {
+  }
+  
+  #expense-form input, #saving-form input, #investment-form input, #debt-form input {
     padding: 10px;
-    border: 1px solid #cccccc; /* Light gray borders for form fields */
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
     border-radius: 4px;
-    background-color: #ffffff; /* White background for inputs */
-    color: #333333; /* Dark text for input fields */
-}
-
-#finance-form button {
-    margin-top: 15px;
+  }
+  
+  button {
     padding: 10px;
-    background-color: #28a745; /* Bright green for buttons */
+    background-color: #28a745;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    color: #ffffff; /* White text for buttons */
+    color: #ffffff;
     font-weight: bold;
-}
-
-#finance-form button:hover {
-    background-color: #218838; /* Darker green on hover */
-}
-
-.chart-container {
-    margin: 20px 0;
-    background-color: #ffffff; /* White background for charts */
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  .item-list {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .chart-container {
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-footer {
-    background-color: #0066cc; /* Matching blue footer */
-    text-align: center;
-    padding: 10px;
-}
-
-footer p {
-    color: #ffffff; /* White text for footer */
-}
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
